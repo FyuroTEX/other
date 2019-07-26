@@ -1,2 +1,46 @@
-/* Your styles go here */
+#root {
+    text-align: center;
+  }
+  
+  #field-for-input {
+    width: 280px;    
+    padding: 7px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 7px;
+  }
+  
+  .action-description {
+    color: black;
+    font-size: 25px;
+    margin: 15px;
+    text-decoration: none;
+  }
+  
+  .button {
+    font-size: 23px;
+    padding: 2px 20px;
+    border-radius: 9px;
+  }
+  
+  .buttons {
+    display: flex;
+    width: 320px;
+    margin: auto;
+    justify-content: space-between;
+  }
+  
+  .list-empty {
+    font-size: 20px;
+  }
+  
+  .square {
+    justify-self: flex-end;
+  }
+  
+  .action_list_item {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+  }
 
