@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {    
+    font-size: 10px;
+    padding: 0 0.5rem;
+}
+#root {
+    max-width: 900px;
+    margin: 5rem auto 1rem auto;    
+}
+#root h1 {
+    text-align: center;
+    font-size: 2rem;
+    color:  #00BFFF;    
+    margin-bottom: 1.5rem;
+}
+.max-lenghts-massage {
+    font-size: 1.2rem;
+    text-align: center;
+    color: red;
+    margin-bottom: 1rem;
+}
+.hide {
+    display: none;
+}
+#newTodo {
+    display: inline-block;
+    width: 90%;
+    height: 3rem;
+    margin-right: 2.5%;
+    font-size: 1.2rem;
+    border: 2px solid #DCDCDC;
+    border-radius: 5px;
+    padding-left: 1rem;
+} 
+.addTodo {
+    display: inline-block;
+    background-color: #C0C0C0;
+    border: none;
+    padding: 0 0.5rem;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;    
+    line-height: 1;
+    border-radius: 3px;
+    cursor: pointer;    
+    transform: translateY(10%);
+}
+
+hr {
+    margin-top: 10px;
+    size: 15px;
+    border: none;
+    background-color: #1395eb8c;
+    height: 10px;
+}
+#todoList {
+    list-style: none;
+}
+.todoTaskItem {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    cursor: move;
+}
+/* .todoTaskItem {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    
+} */
+.doItem-elem_over {
+    border: 2px dashed #000;
+    border-top: 2px solid blue;
+}
+/* .btn {
+    flex-grow: 0;
+    border: none;
+    background-color: transparent;
+    color:  #87CEEB;
+    outline: none;
+} */
+.btn {
+    display: inline-flex;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    
+  }
+.btn i {
+    font-size: 35px;
+    color: #1395eb8c;
+    transition: all .4s; 
+  }
+  .btn:hover i {
+    color: #2470fd;
+  }
+ 
+
+.checkbox {
+    margin-right: 0.5rem;
+}
+.edit,
+.save {
+    margin: 0 0.5rem;
+}
+.delete{
+    margin-left: auto;
+}
+.doItem-push {    
+    flex-grow: 1;
+}
+.checkbox > i.material-icons {
+    color: #C0C0C0;
+}
+.todoTaskItem label,
+.todoTaskItem input {
+    color:  #00BFFF;
+    font-size: 22px;
+}
+
+.todoTaskItem label.done {
+    color: #AFEEEE;
+}
+.done {
+    color: #AFEEEE;
+}
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+  }
