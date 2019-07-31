@@ -1,0 +1,11 @@
+/* .container {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+  } */
+  ul {
+    margin-inline-start: 2%;
+    margin-inline-end: 2%;
+    padding-inline-start: 0px;
+}
