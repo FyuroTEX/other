@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<!--[if lt IE 9]>
+ <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<title> Stu Nicholls | CSS PLAY | Return of the image maps </title>
+<meta name="Author" content="Stu Nicholls">
+<meta name="Keywords" content="cssplay, css, play, Cascading, Style, Sheets, experiments, demonstrations, image, map, solar, system, planets">
+<meta name="Description" content="CSS play - a solar image map menu">
+
+<meta name="msapplication-TileImage" content="/cssplay-tile.png">
+<meta name="application-name" content="CSS play">
+<meta name="msapplication-TileColor" content="#006699">
+
+<meta name="verify-v1" content="n3Dpx4NklZjg5p/Tq7h1q+Oj6Ml83crtkO/PwepVQ6Y=">
+<meta http-equiv="PICS-Label" content='(PICS-1.1 "http://www.classify.org/safesurf/" L gen true for "http://www.cssplay.co.uk" r (SS~~000 1))'>
+<link rel="meta" href="http://www.cssplay.co.uk/labels.rdf" type="application/rdf+xml" title="ICRA labels">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.cssplay.co.uk/feed.xml">
+<meta http-equiv="imagetoolbar" content="no">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/ico">
+
+<meta name="alexaVerifyID" content="NxZdT78RYs2r1JgJ_Sf4nE-uiaU">
+<link rel="P3Pv1" href="http://www.cssplay.co.uk/w3c/p3p.xml">
+
+<script src='/javascript/prettify.js'></script>
+<link href='/lato-font/stylesheet.css' rel='stylesheet' type='text/css'>
+<link href='/stylesheets/main.css' rel='stylesheet' type='text/css'>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-6651950180071236",
+          enable_page_level_ads: true
+     });
+</script>
+<link href='http://fonts.googleapis.com/css?family=Domine:400,700' rel='stylesheet' type='text/css'>
+
+<style>
+
+
+#map {position:relative; margin:50px auto; width:700px; height:503px; font-family:'latomedium', arial, sans-serif;}
+#map ul {padding:0; margin:0; list-style:none; position:absolute; top:0; left:0;}
+#map ul li {position:absolute;}
+#map ul li#sun {width:215px; height:210px; top:31px; left:63px;}
+#map ul li#mercury {width:69px; height:70px; top:77px; left:291px;}
+#map ul li#venus {width:117px; height:119px; top:306px; left:130px;}
+#map ul li#moon {width:104px; height:104px; top:352px; left:346px;}
+#map ul li#earth {width:257px; height:257px; top:246px; left:435px;}
+
+/* remove the absolute position from the list items for lte IE6 */
+* html #map ul li {position:static;}
+
+/* and give the absolute position to the links for lte IE6 */
+* html #map ul li a.tl {position:absolute;}
+* html #map ul li#sun a.tl {top:31px; left:63px;}
+* html #map ul li#mercury a.tl {top:77px; left:291px;}
+* html #map ul li#venus a.tl {top:306px; left:130px;}
+* html #map ul li#moon a.tl {top:352px; left:346px;}
+* html #map ul li#earth a.tl {top:246px; left:435px;}
+
+#map ul li a {text-decoration:none; font-size:14px;}
+
+#map ul li a.tl {display:block; text-indent:-9999px; background: url(planets/transparent.gif);}
+
+#map ul li a.tl:hover, #map ul li:hover {z-index:500;}
+
+#map ul li#sun a.tl {width:215px; height:210px;}
+#map ul li#sun a.tl:hover, #map ul li#sun:hover {background:url(planets/sun.jpg);}
+#map ul li#mercury a.tl {width:69px; height:70px;}
+#map ul li#mercury a.tl:hover, #map ul li#mercury:hover {background:url(planets/mercury.jpg);}
+#map ul li#venus a.tl {width:117px; height:119px;}
+#map ul li#venus a.tl:hover, #map ul li#venus:hover {background:url(planets/venus.jpg);}
+#map ul li#moon a.tl {width:104px; height:104px;}
+#map ul li#moon a.tl:hover, #map ul li#moon:hover {background:url(planets/moon.jpg);}
+#map ul li#earth a.tl {width:257px; height:257px;}
+#map ul li#earth a.tl:hover, #map ul li#earth:hover {background:url(planets/earth.jpg);}
+
+#map ul li .xsnazzy,
+#map ul li a .xsnazzy
+{visibility:hidden;}
+
+/* For IE6 to work */
+* html #map ul li a.tl:hover {border:0;}
+
+* html #map ul li a:hover .xsnazzy {visibility:visible;}
+
+#map ul li:hover .xsnazzy {visibility:visible;}
+
+/* For IE7 to keep the :hover over .xsnazzy - goodness knows why? */
+#map ul li:hover .xsnazzy {background:url(http://www.cssplay.co.uk/menu/transparent.gif);}
+
+.xsnazzy {display:block; position:absolute; height:auto; text-align:center;}
+
+#sun .xsnazzy {left:35px; top:190px; width:300px;}
+#mercury .xsnazzy {left:55px; top:-20px; width:210px;}
+#venus .xsnazzy {left:-130px; top:-90px; width:130px;}
+#moon .xsnazzy {left:-195px; top:-160px; width:300px;}
+#earth .xsnazzy {left:-70px; top:-160px; width:250px;}
+
+.xsnazzy h1, .xsnazzy p {margin:0 10px;}
+.xsnazzy h1 {font-size:24px; color:#6f9; font-family: 'latolight', arial, sans-serif; border-bottom:1px solid #fff;}
+#map .xsnazzy p {padding:10px; color:#eee; font-size:14px; text-align:left;}
+.xsnazzy {background: transparent; margin:1em;}
+
+.xb1, .xb2, .xb3, .xb4, .xb5, .xb6, .xb7 {display:block; font-size:0; overflow:hidden;}
+.xb1, .xb2, .xb3, .xb4, .xb5, .xb6 {height:1px;}
+.xb4, .xb5, .xb6, .xb7 {background:#ccc; border-left:1px solid #fff; border-right:1px solid #fff;}
+.xb1 {margin:0 8px; background:#fff;}
+.xb2 {margin:0 6px; background:#fff;}
+.xb3 {margin:0 4px; background:#fff;}
+.xb4 {margin:0 3px; background:#7f7f9c; border-width:0 5px;}
+.xb5 {margin:0 2px; background:#7f7f9c; border-width:0 4px;}
+.xb6 {margin:0 2px; background:#7f7f9c; border-width:0 3px;}
+.xb7 {margin:0 1px; background:#7f7f9c; border-width:0 3px; height:2px;}
+
+.xboxcontent {display:block; background:#7f7f9c; border:3px solid #fff; border-width:0 3px;}
+.xboxcontent a, .xboxcontent a:visited {display:block; color:#ff0; font-weight:bold; font-size:12px; text-indent:0; padding:4px;}
+
+#map ul li a:hover .xsnazzy .xboxcontent a:hover {color:#fff;}
+#map ul li:hover .xsnazzy .xboxcontent a:hover {color:#fff;}
+
+.xsnazzy em.point_top {display:block; font-size:0; width:25px; height:14px; background:url(planets/point.gif) center top; position:absolute; left:50px; top:-11px;}
+.xsnazzy em.point_bottom {display:block; font-size:0; width:25px; height:14px; background:url(planets/point.gif) center bottom; position:absolute; right:50px; bottom:-11px;}
+/* for IE5.5 */
+* html .xsnazzy em.point_bottom {bottom:-12px; bo\ttom:-11px;}
+.xsnazzy em.point_left {display:block; font-size:0; width:14px; height:25px; background:url(planets/point.gif) left center; position:absolute; left:-11px; top:30px;}
+.xsnazzy em.point_right {display:block; font-size:0; width:14px; height:25px; background:url(planets/point.gif) right center; position:absolute; right:-11px; top:125px;}
+/* for IE5.5 */
+* html .xsnazzy em.point_right {right:-12px; ri\ght:-11px;}
+
+</style>
+
+<style>
+	@media only screen and (max-width:480px) {
+	#map {display:none;}
+	#info h3.smartphone {display:block;}
+	}
+</style>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-451410-1', 'auto');
+ga('send', 'pageview');
+</script>
+</head>
+
+<body id="www-cssplay-co-uk" class="demos">
+
+<script async type="text/javascript" src="//cdn.fancybar.net/ac/fancybar.js?zoneid=1502&serve=C6ADVKE&placement=cssplay" id="_fancybar_js"></script>
+
+<header>
+</header>
+
+<div id="map">
+<img src="planets/solar_system.jpg" alt="solar system" title="solar system" />
+<ul>
+<li id="mercury"><a href="#nogo" class="tl">MERCURY<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<div class="xsnazzy">
+<em class="point_left"></em>
+<b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b><b class="xb5"></b><b class="xb6"></b><b class="xb7"></b>
+<div class="xboxcontent">
+<h1>Mercury</h1>
+<p>Mercury is a lump of rock, barely larger than the Moon</p>
+<a href="http://en.wikipedia.org/wiki/Mercury_(planet)">Wikipedia</a>
+<a href="http://www.solarsystem.org.uk/mercury/">A planet of extremes</a>
+<a href="http://www.nineplanets.org/mercury.html">General Information</a>
+</div>
+<b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b>
+</div>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li id="venus"><a href="#nogo" class="tl">VENUS<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<div class="xsnazzy">
+<em class="point_right"></em>
+<b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b><b class="xb5"></b><b class="xb6"></b><b class="xb7"></b>
+<div class="xboxcontent">
+<h1>Venus</h1>
+<p>Venus has the densest atmosphere of the terrestrial planets, consisting mostly of carbon dioxide.</p>
+<a href="http://en.wikipedia.org/wiki/Venus">Wikipedia</a>
+<a href="http://www.nineplanets.org/venus.html">General information</a>
+<a href="http://www.solarsystem.org.uk/venus/">Earth's twin</a>
+</div>
+<b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b>
+</div>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li id="moon"><a href="#nogo" class="tl">MOON<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<div class="xsnazzy">
+<em class="point_bottom"></em>
+<b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b><b class="xb5"></b><b class="xb6"></b><b class="xb7"></b>
+<div class="xboxcontent">
+<h1>Moon</h1>
+<p>The Moon is the only celestial body that human beings have orbited or landed on</p>
+<a href="http://moon.google.com/">Google Moon</a>
+<a href="http://en.wikipedia.org/wiki/Moon">Wikipedia</a>
+<a href="http://www.nineplanets.org/luna.html">General information</a>
+</div>
+<b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b>
+</div>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li id="earth"><a href="#nogo" class="tl">EARTH<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<div class="xsnazzy">
+<em class="point_bottom"></em>
+<b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b><b class="xb5"></b><b class="xb6"></b><b class="xb7"></b>
+<div class="xboxcontent">
+<h1>Earth</h1>
+<p>Earth is the third planet from the Sun and the fifth largest:</p>
+<a href="http://en.wikipedia.org/wiki/Earth">Wikipedia</a>
+<a href="http://earthobservatory.nasa.gov/">Earth observatory</a>
+<a href="http://www.bbc.co.uk/nature/animals/planetearth/">Planet earth</a>
+</div>
+<b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b>
+</div>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li id="sun"><a href="#nogo" class="tl">SUN<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<div class="xsnazzy">
+<em class="point_top"></em>
+<b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b><b class="xb5"></b><b class="xb6"></b><b class="xb7"></b>
+<div class="xboxcontent">
+<h1>Sun</h1>
+<p>The Sun is the most prominent feature in our solar system.</p>
+<a href="http://www.nineplanets.org/sol.html">General Information</a>
+<a href="http://en.wikipedia.org/wiki/Sun">Wikipedia</a>
+<a href="http://www.michielb.nl/sun/">A virtual tour</a>
+</div>
+<b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b>
+</div>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+</ul>
+</div>
+
+<br><br>
+		<ins class="adsbygoogle adslot_1"
+	 data-ad-client="ca-pub-6651950180071236"
+	 data-ad-slot="3056876056"></ins>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+
+</body>
+</html>
