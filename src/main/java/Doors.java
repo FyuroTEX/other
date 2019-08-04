@@ -3,7 +3,7 @@ public class Doors {
     Double width;
     Double heigth;
 
-    public Doors(){
+    public Doors() {
         this.color = "Brown";
         this.width = 2.4;
         this.heigth = 1.5;

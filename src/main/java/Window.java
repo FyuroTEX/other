@@ -4,7 +4,7 @@ public class Window {
     String typeOfGlass;
     String typeOfFrame;
 
-     public Window(Double width, Double heigth, String typeOfGlass, String typeOfFrame) {
+    public Window(Double width, Double heigth, String typeOfGlass, String typeOfFrame) {
         this.width = width;
         this.heigth = heigth;
         this.typeOfGlass = typeOfGlass;
@@ -19,13 +19,17 @@ public class Window {
     }
 
     protected void setWidth(Double width) {
+
         this.width = width;
     }
 
     public void setHeigth(Double heigth) {
+
         this.heigth = heigth;
     }
+
     public void setTypeOfGlass(String typeOfGlass) {
+
         this.typeOfGlass = typeOfGlass;
     }
 
@@ -34,6 +38,7 @@ public class Window {
     }
 
     public Double getWidth() {
+
         return width;
     }
 

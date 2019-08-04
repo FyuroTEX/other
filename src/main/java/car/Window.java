@@ -2,12 +2,21 @@ package car;
 
 public class Window {
 
-    Integer opacity;
+    Double opacity;
 
-    public Window(int opacity ){
+    public Window(Double opacity) {
         this.opacity = opacity;
     }
-    public Window( ){
-        this.opacity = 1;
+
+    public Window() {
+        this.opacity = 1.0;
+    }
+
+    public void setOpacity(Double opacity) {
+        this.opacity = opacity;
+    }
+
+    public Double getOpacity() {
+        return opacity;
     }
 }

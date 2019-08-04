@@ -11,18 +11,16 @@ public class Lesson {
         /////////
 
 
-
         Float numberWithCommmaflt = 213124.23432f;
         Byte bytes = 127;
 
 
-
         House comeClass = new House();
 
-       String tex1t = comeClass.someText();
+        String tex1t = comeClass.someText();
         System.out.println(comeClass.getWindow().getHeigth());
-       comeClass.getWindow().setHeigth(2.5);
-       comeClass.getWindow().setHeigth(2.5);
+        comeClass.getWindow().setHeigth(2.5);
+        comeClass.getWindow().setHeigth(2.5);
         System.out.println(comeClass.getWindow().getHeigth());
 //        System.out.println(comeClass.window.heigth);
         comeClass.someFunction();
