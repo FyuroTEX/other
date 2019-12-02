@@ -8,11 +8,16 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  color: #303030;
 }
 .container {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+.container-fluid{
+  margin: 0 auto;
+  max-width: 1720px;
 }
 .header__inner {
   display: flex;
@@ -108,7 +113,6 @@ body {
   padding: 50px 50px 90px 50px;
 }
 .top-form__title {
-  color: #303030;
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 1px;
@@ -136,6 +140,10 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
+  
+}
+
+.form__btn{
   padding: 22px 110px 22px 75px;
   border: none;
   outline: none;
@@ -146,8 +154,9 @@ body {
   background-color: #7eb252;
   text-transform: uppercase;
   cursor: pointer;
+  position: relative;
 }
-.top-form button::after {
+.form__btn::after {
   content: '';
   background-image: url(../images/arrow.png);
   height: 9px;
@@ -357,9 +366,6 @@ body {
   border: 1px solid #c5dab5;
   padding: 35px;
 }
-.tabs__reviews-text {
-  color: #303030;
-}
 .tabs__reviews-link {
   color: #7eb152;
   padding: 0 8px;
@@ -394,4 +400,152 @@ body {
   position: absolute;
   right: 100px;
   top: 30px;
+}
+.popularity{
+  padding-top: 200px;
+
+}
+.popularity__wrapper{
+
+  background-image: url(../images/papularity.jpg);
+  min-height: 645px;
+  background-repeat: no-repeat;
+}
+.popularity__inner{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.popularity__right{
+  max-width: 500px;
+  padding-right: 15px;
+  width: 100%;
+}
+.popularity__right-title{
+  color: #303030;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 40px;
+  margin-top: 55px;
+}
+.popularity__right-subtitle{
+  font-size: 14px;
+  color: #303030;
+  padding: 50px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.popularity__right-list{
+  list-style: none;
+}
+.popularity__right-list li{
+  color: #303030;
+  line-height: 22px;
+  margin-bottom: 45px;
+  padding-left: 40px;
+  position: relative;
+}
+.popularity__right-list li::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 8px;
+  height: 13px;
+  background-image: url(../images/shevron.svg);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.popularity__box{
+  background-color: #fff;
+  padding: 20px;
+}
+.popularity__box-text{
+  border: 1px solid #c5dab5;
+  padding: 30px;
+  color: #303030;
+  margin-right: 70px;
+}
+.popularity__box-link{
+  padding: 22px 85px 22px 27px;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: #7eb252;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: absolute;
+}
+.popularity__box-link::after {
+  content: '';
+  background-image: url(../images/arrow.png);
+  height: 9px;
+  width: 31px;
+  position: absolute;
+  right: 40px;
+  top: 25px;
+}
+.history{
+  margin: 270px 0 200px;
+}
+.history__wrapper{
+  background-image: url(../images/alonso.jpg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  min-height: 920px;
+}
+.history__title{
+padding: 90px 0px 45px;
+font-size: 40px;
+line-height: 50px;
+font-weight: 700;
+max-width: 570px;
+}
+.history__text{
+  background-color: #f6f9f3;
+  padding: 35px 30px 35px 0;
+  max-width: 700px;
+  position: relative;
+}
+.history__text::before{
+content: '';
+position: absolute;
+height: 100%;
+background-color: #f6f9f3;
+width: 275px;
+right: 100%;
+top: 0;
+}
+.history__text p{
+margin: 15px 0;
+}
+.history__form{
+  max-width: 400px;
+  padding-left: 30px;
+  margin-left: 200px;
+}
+.history__form-title{
+  margin: 45px 0px 30px;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-right: 30px;
+}
+.history__form input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #cddcbc;
+  height: 34px;
+  display: block;
+  width: 100%;
+  font-size: 14px;
+}
+.history__form input::placeholder{
+color: #a8c48c;
+}
+.history__form button{
+  width: 100%;
+  margin-top: 30px;
 }
